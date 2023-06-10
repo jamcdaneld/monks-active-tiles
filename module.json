@@ -50,9 +50,9 @@
   "styles": [
     "css/monks-active-tiles.css"
   ],
-  "url": "https://github.com/ironmonk88/monks-active-tiles",
-  "download": "https://github.com/ironmonk88/monks-active-tiles/archive/10.21.zip",
-  "manifest": "https://github.com/ironmonk88/monks-active-tiles/releases/latest/download/module.json",
+  "url": "https://github.com/jamcdaneld/monks-active-tiles",
+  "download": "https://github.com/jamcdaneld/monks-active-tiles/archive/10.21.zip",
+  "manifest": "https://github.com/jamcdaneld/monks-active-tiles/releases/latest/download/module.json",
   "bugs": "https://github.com/ironmonk88/monks-active-tiles/issues",
   "allowBugReporter": true,
   "id": "monks-active-tiles",
