@@ -2129,32 +2129,22 @@ export class MonksActiveTiles {
             }
         }
 
-        if (game.modules.get("lib-wrapper")?.active) {
-            libWrapper.register("monks-active-tiles", "Canvas.prototype._onClickLeft", _onLeftClick, "WRAPPER");
-        } else {
-            const oldClickLeft = Canvas.prototype._onClickLeft;
-            Canvas.prototype._onClickLeft = function (event) {
-                return _onLeftClick.call(this, oldClickLeft.bind(this), ...arguments);
-            }
-        }
+        const oldClickLeft = Canvas.prototype._onClickLeft;
+        Canvas.prototype._onClickLeft = function (event) {
+            return _onLeftClick.call(this, oldClickLeft.bind(this), ...arguments);
 
-        if (game.modules.get("lib-wrapper")?.active) {
-            libWrapper.register("monks-active-tiles", "Canvas.prototype._onClickRight", _onRightClick, "WRAPPER");
-        } else {
-            const oldClickRight = Canvas.prototype._onClickRight;
-            Canvas.prototype._onClickRight = function (event) {
-                return _onRightClick.call(this, oldClickRight.bind(this), ...arguments);
-            }
-        }
 
-        if (game.modules.get("lib-wrapper")?.active) {
-            libWrapper.register("monks-active-tiles", "Canvas.prototype._onClickLeft2", _onLeftClick2, "WRAPPER");
-        } else {
-            const oldClickLeft = Canvas.prototype._onClickLeft2;
-            Canvas.prototype._onClickLeft2 = function (event) {
-                return _onLeftClick2.call(this, oldClickLeft.bind(this), ...arguments);
-            }
-        }
+
+        const oldClickRight = Canvas.prototype._onClickRight;
+        Canvas.prototype._onClickRight = function (event) {
+            return _onRightClick.call(this, oldClickRight.bind(this), ...arguments);
+
+
+
+        const oldClickLeft = Canvas.prototype._onClickLeft2;
+        Canvas.prototype._onClickLeft2 = function (event) {
+            return _onLeftClick2.call(this, oldClickLeft.bind(this), ...arguments);
+
 
         let clickDocumentName = async function (wrapped, ...args) {
             let event = args[0];
